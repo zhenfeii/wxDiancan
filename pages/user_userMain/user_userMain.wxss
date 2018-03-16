@@ -1,0 +1,86 @@
+.content{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+.header{
+  display: block;
+  padding: 30px;
+  background: #0097fe;
+}
+.left{
+  display: inline-block;
+  margin-right: 35px;
+}
+.pic1{
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+.right{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  color: #fff;
+}
+.user{
+  display: block;
+  margin-bottom: 13px;
+  font-size: 24px;
+}
+.phone{
+  display: block;
+  font-size: 16px;
+}
+.pic2{
+  display: inline-block;
+  height: 16px;
+  width: 8px;
+}
+.phone-num{
+  margin-left: 7px;
+}
+ul{
+  display: block;
+  background: #fff;
+}
+.add,.service,.share{
+  display: block;
+  padding: 20px 20px 20px 25px;
+  position: relative;
+}
+.pic3,.pic5,.pic6{
+  display: inline-block;
+  margin-right: 20px;
+  height: 22px;
+  width: 22px;
+}
+.pic4{
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+}
+.border{
+  display: block;
+  margin-left: 59px;
+  border-bottom: 1px solid #aaa;
+}
+.share{
+  border-bottom: 1px solid #aaa;
+}
+.exit{
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  padding: 15px 0 20px 0;
+  text-align: center;
+  background: #fff;
+}
+.exit-text{
+  color: #f00;
+}

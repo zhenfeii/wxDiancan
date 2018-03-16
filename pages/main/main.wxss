@@ -1,0 +1,161 @@
+.header{
+  background:#0097ff;
+}
+.info{
+  background:#0097ff;
+  display: block;
+  position:relative;
+  padding:20px;
+}
+image{
+  margin: 0;
+  padding: 0;
+  height:0;
+  width: 0;
+}      
+.local{
+  display:inline-block;
+  margin-top:7px;
+}
+.pic1,.pic2{
+  width: 16px;
+  height: 16px;
+  margin-right:4px;
+  display:inline-block;
+  vertical-align:top;
+}
+.text{
+  margin-right:4px;
+  color: #fff;
+  display:inline-block;
+  vertical-align:top;
+  font-size:16px;
+  line-height:16px;
+}
+.weather{
+  display:inline-block;
+  position:absolute;
+  right:20px;
+  top:20px;
+}
+.left{
+  display:inline-block;
+  vertical-align:top;
+  margin-right:4px;
+  text-align:center;
+  color:#fff;
+}
+.degree{
+  display:block;
+  font-size:14px;
+}          
+.desc{
+  display:block;
+  font-size:12px;	
+}
+.right{
+  display:inline-block;
+  vertical-align:top;
+}
+.pic3{
+  width: 42px;
+  height: 32px;
+  display:inline-block;
+}
+.search{
+  padding:20px;
+  display: block;
+  background:#0097ff;
+}
+.inner{
+  display: block;
+  
+  height:52px;
+  border-radius:20px;
+  background-color:#fff;
+}
+.picture{
+  display: block;
+  width:100%;
+  height:160px;
+  line-height:160px;
+  background:#fff;
+  text-align:center;
+}
+.item{
+  display: block;
+  background:#fff;
+  height:114px;
+  padding:20px 20px 5px 20px;
+  border-bottom:1px solid rgba(7,17,27,0.3);
+}
+.avatar{
+  display:inline-block;
+  vertical-align:top;
+  border:1px solid rgba(7, 17, 27,0.5);
+  width: 94px;
+  height: 94px;
+}
+.pic4{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+}
+.content{
+  display: inline-block;
+  margin-left: 16px;
+}
+.title{
+  display: block;
+  margin: 4px 0 13px 0;
+}
+.pic5{
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 18px;
+}
+.name{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 6px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.description{
+  display: block;
+  margin-bottom: 10px;
+  line-height: 12px;
+  font-size: 0;
+}
+  
+.star{
+  font-size: 12px;
+}
+.score{
+  margin:0 7px 0 6px;
+  font-size: 12px;
+  color:#ff6600;
+}
+.sell{
+  font-size: 12px;
+  color:#696969;
+}
+.service{
+  display: inline-block;
+  line-height:12px;
+  font-size:0;
+  color:#696969;
+}
+.deli{
+  display: inline-block;
+  padding-right: 4px;
+  border-right:1px solid rgba(7,17,27,0.3);
+  font-size:12px;
+}
+.money{
+  display: inline-block;
+  padding-left: 4px;
+  font-size:12px;
+}

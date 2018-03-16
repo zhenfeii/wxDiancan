@@ -1,0 +1,28 @@
+<view>
+  <ul>
+    <li class="item">
+      <div class="one">
+        <div class="avatar">
+          <image class='pic1' src='../../resource/img/eleme.jpg'></image>
+        </div>
+        <div class="content">
+          <span class="left">
+            <span class="name">名字</span>
+            <span class="time">2017</span>
+          </span>
+          <span class="right">订单取消</span>  
+        </div>
+        <div class="border"></div>
+      </div>
+      <div class="two">
+        <span class="food">意大利面</span>
+        <span class="price">￥78</span>
+      </div>
+      <div class="three">
+        <div class="wrapper">
+          <span class="add">再来一单</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</view>

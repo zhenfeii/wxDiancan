@@ -1,0 +1,86 @@
+.item{
+  display: block;
+  border-bottom: 10px solid #f4f4f4;
+  width: 100%;
+}
+.one{
+  display: block;
+  height: 64px;
+  padding: 20px 0 0 20px;
+}
+.avatar{
+  display:inline-block;
+  vertical-align:top;
+  width: 44px;
+  height: 44px;
+  margin-right: 15px;
+}
+.pic1{
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
+.content{
+  display:inline-block;
+  vertical-align:top;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+.name{
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.time{
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #989898;
+}
+.right{
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.border{
+  display: block;
+  margin: 0 20px 0 59px;
+  border-bottom: 1px solid #989898;
+}
+.two{
+  display: block;
+  margin: 0 20px;
+  padding-left: 59px;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid #989898;
+}
+.food{
+  font-size: 18px;
+  line-height: 18px;
+  color: #666;
+}
+.price{
+  position: absolute;
+  right: 20px;
+}
+.three{
+  display: block;
+  height: 50px;
+  padding: 15px 0;
+}
+.wrapper{
+  position: absolute;
+  right: 20px;
+  border: 3px solid #398fdc;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.add{
+  font-size: 18px;
+  line-height: 18px;
+  color: #666;
+}

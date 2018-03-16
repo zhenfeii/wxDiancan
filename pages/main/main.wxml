@@ -1,0 +1,50 @@
+<view>
+	<div class="header">
+    <div class="info">
+      <div class="local" bindtap="chooseLocation">
+        <image class='pic1' src='../../resource/img/location.png'></image>
+        <span class="text" wx:if="{{nolocationFlag}}">请手动定位...</span>
+        <span class="text" wx:if="{{location}}">{{location.address}}</span>
+      </div>
+      <div class="weather">
+        <div class="left">
+          <span class="degree">{{weather.temperature}}度</span>
+          <span class="desc">{{weather.text}}</span>
+        </div>
+        <div class="right">
+          <image class='pic3' src='../../resource/weatherImg/{{weather.code}}.png'></image>
+        </div>
+      </div>
+    </div>
+    <div class="search">
+      <div class="inner"></div>
+    </div>
+    <div class="picture">图片轮播区</div>
+
+    <!-- 商家列表 -->
+    <ul wx:for="{{seller}}">
+      <navigator url="/pages/goods/goods?id={{item.id}}" hover-class="navigator-hover" >
+        <li class="item" >
+            <div class="avatar">
+              <image class='pic4' src='{{item.avatar}}'></image>
+            </div>
+            <div class="content">
+              <div class="title">
+                <span class="name">{{item.name}}</span>
+              </div>
+              <div class="description">
+                <span class="star">星级组件</span>
+                <span class="score">{{item.foodScore}}</span>
+                <span class="sell">月售{{item.sellCount}}单</span>
+              </div>
+              <div class="service">
+                <span class="deli">￥{{item.minPrice}}起送</span>
+                <span class="money">配送费{{item.deliveryPrice}}元</span>
+              </div>
+            </div>
+          </li>
+      </navigator>
+    </ul>
+		
+  </div>  
+</view>

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/goods/goods",
+    "pages/order/order",
+    "pages/order_detail/order_detail",
+    "pages/more/more",
+    "pages/user_userMain/user_userMain",
+    "pages/logs/logs",
+		"pages/amap/index/index",
+		"pages/amap/regeo/regeo",
+		"pages/amap/weather/weather",
+		"pages/amap/poi/poi",
+		"pages/amap/staticmap/staticmap",
+		"pages/amap/navigation_car/navigation",
+		"pages/amap/navigation_bus/navigation",
+		"pages/amap/navigation_walk/navigation",
+		"pages/amap/navigation_ride/navigation",
+		"pages/amap/navigation_car_detail/navigation",
+		"pages/amap/navigation_walk_detail/navigation",
+		"pages/amap/navigation_ride_detail/navigation",
+		"pages/amap/inputtips/input"
+  ],
+  "tabBar": {
+    "selectedColor": "#515151",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "resource/img/icon-paihangbang.png",
+        "selectedIconPath": "resource/img/icon-paihangbang-act.png",
+        "text": "商家"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "resource/img/icon-kaoshi.png",
+        "selectedIconPath": "resource/img/icon-xuexi-act.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/amap/index/index",
+        "iconPath": "resource/img/icon-xuexi.png",
+        "selectedIconPath": "resource/img/icon-kaoshi-act.png",
+        "text": "更多"
+      },
+      {
+        "pagePath": "pages/user_userMain/user_userMain",
+        "iconPath": "resource/img/icon-me.png",
+        "selectedIconPath": "resource/img/icon-me-act.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#f2f2f2",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#787878",
+    "navigationBarTextStyle": "white"
+  }
+}

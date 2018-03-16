@@ -1,0 +1,38 @@
+<view>
+<div class="content">
+  <div class="header">
+     <div class="left">
+        <image class='pic1' src='{{avatarUrl}}'></image>
+     </div>
+     <div class="right">
+        <div class="user">{{username}}</div>
+        <div class="phone">
+          <image class='pic2' src='{{avatarUrl}}'></image>
+          <span class="phone-num">{{phone}}</span>
+      </div>
+     </div>
+  </div>
+  <ul>
+    <li class="add">
+      <image class='pic3' src='../../resource/img/avatar.png'></image>
+      <span class="add-text">收货地址</span>
+      <image class='pic4' src='../../resource/img/avatar.png'></image>   
+    </li>
+    <li class='border'></li>
+    <li class="service">
+      <image class='pic5' src='../../resource/img/avatar.png'></image>
+      <span class="service-text">服务中心</span>
+      <image class='pic4' src='../../resource/img/avatar.png'></image>
+    </li>
+    <li class='border'></li>
+    <li class="share">
+      <image class='pic6' src='../../resource/img/avatar.png'></image>
+      <span class="share-text">分享拿5元现金</span>
+      <image class='pic4' src='../../resource/img/avatar.png'></image>
+    </li>
+  </ul>  
+  <div class="exit">
+      <span class="exit-text">退出登录</span>
+    </div>
+</div>    
+</view>

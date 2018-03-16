@@ -1,0 +1,65 @@
+<view>
+  <ul>
+    <li class="name">
+      <image class='pic1' src='{{avatar}}'></image>
+      <span class="name-text">{{name}}</span>
+    </li>
+    <ul wx:for="{{cartArray}}">
+      <li class="food">
+        <span class="food-text">{{item.name}}</span>
+        <div class="food-right">
+          <span class="food-num">x{{item.num}}</span>
+          <span class="food-price">￥{{item.price}}</span>
+        </div>
+      </li>
+    </ul>
+    <li class="delivery">
+      <span class="delivery-text">配送费</span>
+      <span class="delivery-price">￥{{deliveryPrice}}</span>
+    </li>
+    <li class="price">
+      <span class="price-text">特惠</span>
+      <span class="price-price">暂无</span>
+    </li>
+    <li class="money">
+      <span class="money-price">实付￥{{totalPrice}}</span>
+    </li>
+  </ul>
+  <div class="phone" catchtap="submitOrder">
+    <div class="phone-border">
+      <image class='pic3' src='{{avatar}}'></image>
+      <span class="phone-text">提交订单</span>
+    </div>
+  </div>
+  <div class="border"></div>
+  <ul>
+    <li class="info">配送信息</li>
+    <li class="info-time">送达时间：
+      <span class="info-time-text">尽快送达</span>
+    </li>
+    <li class="info-add">送货地址：
+      <span class="info-add-name">黄先生</span>
+      <span class="info-add-phone">13172213691</span>
+      <span class="info-add-add">广东省番禺区丽江花园左岸22栋1601</span>
+    </li>
+    <li class="info-methods">配送方式：
+      <span class="info-methods-text">顺丰速运</span>
+    </li>
+  </ul>
+  <div class="border"></div>
+  <ul>
+    <li class="order">订单信息</li>
+    <li class="order-num">订单号：
+      <span class="order-num-text">123</span>
+    </li>
+    <li class="order-methods">支付方式：
+      <span class="order-methods-text">微信支付</span>
+    </li>
+    <li class="order-time">下单时间：
+      <span class="order-time-text">2018/3/12 13:01:00</span>
+    </li>
+    <li class="order-invoice">发票信息：
+      <span class="order-invoice-text">wiwikiky</span>
+    </li>
+  </ul>
+</view>
