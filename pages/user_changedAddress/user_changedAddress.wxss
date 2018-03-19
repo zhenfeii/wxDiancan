@@ -1,0 +1,21 @@
+/* pages/user_changedAddress/user_changedAddress.wxss */
+/* user_changedAddress/user_changedAddress.wxss */
+.weui-btn{
+    margin-top:0
+}
+.weui-label{
+    text-align:center;
+
+}
+.inputStart{
+    border-top:1rpx solid #D9D9D9;
+    background-color:#fff;
+}
+.inputEnd{
+    border-bottom:1rpx solid #D9D9D9;
+    background-color:#fff;
+}
+.myhead{
+    padding:20rpx 0 0 20rpx;
+    margin-bottom: 0;
+}

@@ -75,5 +75,6 @@ App({
   globalData: {
     userInfo: null
 	},
-	host: "http://localhost:8080/wx"	
+	// host: "http://localhost:8080/wx"	
+	host: "http://7qdnyi.natappfree.cc/wx"
 })

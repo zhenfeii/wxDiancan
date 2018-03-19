@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
-	"appid": "touristappid",
-	"projectname": "diaocan2",
+	"appid": "wx7e6e712a354d42e7",
+	"projectname": "wxDiancan",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -26,7 +26,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
@@ -77,9 +77,16 @@
 					"query": ""
 				},
 				{
+					"id": 8,
+					"name": "address",
+					"pathName": "pages/user_changedAddress/user_changedAddress",
+					"query": ""
+				},
+				{
 					"id": -1,
-					"name": "order",
-					"pathName": "pages/order/order"
+					"name": "address",
+					"pathName": "pages/user_changeAddress/user_changeAddress",
+					"query": ""
 				}
 			]
 		}

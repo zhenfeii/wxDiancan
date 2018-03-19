@@ -9,7 +9,16 @@ Page({
 		weather: {
 		},
 		location: {},
-		nolocationFlag: true       
+		nolocationFlag: true,
+		imgUrls: [
+			{url:'http://p5k92qj55.bkt.clouddn.com/Fl8kFMlOXfF7jEOvfiq9643fuki-'},
+			{url:'http://p5k92qj55.bkt.clouddn.com/FoyS26WiAKizfc4QRmtojbApbQK7'},
+			{url:'http://p5k92qj55.bkt.clouddn.com/FrpmlCL4kq_0ZzstemDjoTJ8QnmN'}
+		],
+		indicatorDots: false,
+		autoplay: false,
+		interval: 5000,
+		duration: 1000     
 	},
 
 	/**
@@ -19,6 +28,7 @@ Page({
 		let app = getApp()
 		let that = this
 
+		//获取所有商家信息
 		wx.request({
 			url: app.host + '/api/seller',
 			data: {},
@@ -39,6 +49,19 @@ Page({
 			complete: function () {
 				// complete
 			}
+		})
+
+		//获取所有商家图片：
+		wx.request({
+		    url: app.host + "/api/seller/imgs",
+			method: 'GET',
+		    success: function (res) {
+				if(res.data.code == 200){
+					that.setData({
+                        imgUrls: res.data.data
+					})
+				}
+            }
 		})
 
 		//一个很实用的api，可以获取地址，IP，经度纬度
@@ -107,5 +130,15 @@ Page({
 			}
 		})
 		
-	}
+	},
+
+    locatedSeller: function (e) {
+		debugger
+		let sellerId = e.currentTarget.dataset.sellerid
+		wx.navigateTo({
+			url: '../goods/goods?id=' + sellerId
+		})
+    }
+
+
 })

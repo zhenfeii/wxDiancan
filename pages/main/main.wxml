@@ -1,5 +1,5 @@
 <view>
-	<div class="header">
+  <div class="header">
     <div class="info">
       <div class="local" bindtap="chooseLocation">
         <image class='pic1' src='../../resource/img/location.png'></image>
@@ -12,39 +12,48 @@
           <span class="desc">{{weather.text}}</span>
         </div>
         <div class="right">
-          <image class='pic3' src='../../resource/weatherImg/{{weather.code}}.png'></image>
+          <image class='pic3' src='../../resource/weatherImg/{{weather.code}}.png' ></image>
         </div>
       </div>
     </div>
     <div class="search">
       <div class="inner"></div>
     </div>
-    <div class="picture">图片轮播区</div>
+		<!--轮播区  -->
+    <div class="picture">
+      <swiper autoplay="true" indicator-dots="true">
+        <block wx:for="{{imgUrls}}" wx:for-item="item">
+          <swiper-item>
+            <image src="{{item.avatar}}" style="width: 80%;height: 80%" catchtap="locatedSeller" data-sellerId="{{item.id}}"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </div>
 
     <!-- 商家列表 -->
     <ul wx:for="{{seller}}">
-      <navigator url="/pages/goods/goods?id={{item.id}}" hover-class="navigator-hover" >
-        <li class="item" >
-            <div class="avatar">
-              <image class='pic4' src='{{item.avatar}}'></image>
+      <navigator url="/pages/goods/goods?id={{item.id}}" hover-class="navigator-hover">
+        <li class="item">
+          <div class="avatar">
+            <image class='pic4' src='{{item.avatar}}'></image>
+          </div>
+          <div class="content">
+            <div class="title">
+              <span class="name">{{item.name}}</span>
             </div>
-            <div class="content">
-              <div class="title">
-                <span class="name">{{item.name}}</span>
-              </div>
-              <div class="description">
-                <span class="star">星级组件</span>
-                <span class="score">{{item.foodScore}}</span>
-                <span class="sell">月售{{item.sellCount}}单</span>
-              </div>
-              <div class="service">
-                <span class="deli">￥{{item.minPrice}}起送</span>
-                <span class="money">配送费{{item.deliveryPrice}}元</span>
-              </div>
+            <div class="description">
+              <span class="star">星级组件</span>
+              <span class="score">{{item.foodScore}}</span>
+              <span class="sell">月售{{item.sellCount}}单</span>
             </div>
-          </li>
+            <div class="service">
+              <span class="deli">￥{{item.minPrice}}起送</span>
+              <span class="money">配送费{{item.deliveryPrice}}元</span>
+            </div>
+          </div>
+        </li>
       </navigator>
     </ul>
-		
-  </div>  
+
+  </div>
 </view>

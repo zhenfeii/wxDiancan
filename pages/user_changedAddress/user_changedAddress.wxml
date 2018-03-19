@@ -1,0 +1,32 @@
+<!--pages/user_changedAddress/user_changedAddress.wxml-->
+<!--user_changedAddress/user_changedAddress.wxml-->
+<view class="userInfoUpdate">
+    <view class="weui-article__h1 myhead">修改地址</view> 
+    <form bindsubmit="putPassword" >
+    <view>
+        <view class="weui-cell weui-cell_input inputStart">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">原地址：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="password" class="weui-input" password="true" placeholder="请输入新密码"/>
+                </view>
+        </view>
+        <view class="weui-cell weui-cell_input inputEnd">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">确认密码：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input name="secandPassword" class="weui-input" password="true" placeholder="请再次输入新密码"/>
+                </view>
+        </view>
+        <view class="weui-btn-area">
+        <button class="weui-btn" disabled="{{disablePassword}}" type="primary" formType="submit" loading="{{loadingPassword}}">修改密码</button>
+        </view>
+    </view>
+    </form>
+</view>
+<view class="weui-btn-area">
+        <button class="weui-btn"  type="defult" bindtap="backTo" >返回</button>
+</view>
+

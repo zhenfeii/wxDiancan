@@ -1,5 +1,4 @@
-// pages/amap.js
-
+// pages/user_changedAddress/user_changedAddress.js
 Page({
 
   /**

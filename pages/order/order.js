@@ -4,7 +4,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		
+		order: []
 	},
 
 	/**
@@ -20,8 +20,10 @@ Page({
 			method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
 			// header: {}, // 设置请求的 header
 			success: function(res){
-				debugger
 				// success
+				that.setData({
+					order: res.data.data
+				})
 			},
 			fail: function() {
 				// fail

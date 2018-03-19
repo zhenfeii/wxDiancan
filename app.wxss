@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import 'style/weui.wxss';
+@import 'style/CaoMei-master/style.wxss';
 .container {
   height: 100%;
   display: flex;
