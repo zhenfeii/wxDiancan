@@ -78,7 +78,7 @@
                     <view class="cartControl-wrapper">
                         <view class="cartControl">
                             <view name="fade">
-                                <view class="cart-decrease"  data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="decreaseCart" wx:if="{{food.Count > 0}}">
+                                <view class="cart-decrease" data-item-index="{{index}}" data-parentIndex="{{parentIndex}}" catchtap="decreaseCart" wx:if="{{food.Count > 0}}">
                                     <view class="inner iconfont icon-jian" style="font-size:24px;color:#00A0DC;"></view>
                                 </view>
                                 <view class="cart-count" wx:if="{{food.Count > 0}}">{{food.Count}}</view>
@@ -91,79 +91,198 @@
             </view>
         </view>
     </scroll-view>
-</view>
-<!-- 商品区 -->
 
-<!-- 底部 -->
-<view>
+    <!-- 底部 -->
     <view>
-        <view class="shopCart">
-            <view class="content">
-                <view class="content-left">
-                    <!-- 动态增删样式模板： {{_num==1?'cur':''}}  -->
-                    <view class="logo-wrapper ">
-                        <view class="logo {{totalPrice>0?'highlight':''}}" bindtap="cartShopShow">
-                            <view class="iconfont icon-gouwuche "></view>
+        <view>
+            <view class="shopCart">
+                <view class="content">
+                    <view class="content-left">
+                        <!-- 动态增删样式模板： {{_num==1?'cur':''}}  -->
+                        <view class="logo-wrapper ">
+                            <view class="logo {{totalPrice>0?'highlight':''}}" bindtap="cartShopShow">
+                                <view class="iconfont icon-gouwuche "></view>
+                            </view>
+                            <!-- 小圆圈 -->
+                            <view class="num" wx:if="{{totalCount}}">{{totalCount}}</view>
                         </view>
-                        <!-- 小圆圈 -->
-                        <view class="num" wx:if="{{totalCount}}">{{totalCount}}</view>
+                        <view class="price">{{totalPrice}}</view>
+                        <view class="desc">另需配送费￥4元</view>
                     </view>
-                    <view class="price">{{totalPrice}}</view>
-                    <view class="desc">另需配送费￥4元</view>
-                </view>
-                <view class="content-right">
-                    <view class="pay enough" wx:if="{{(20 - totalPrice) > 0}}">还差{{20 - totalPrice }}元起送</view>
-                    <view class="pay enough" wh:if="{{(20 - totalPrice) <= 0}}" catchtap="account">
-                        去结算
+                    <view class="content-right">
+                        <view class="pay enough" wx:if="{{(20 - totalPrice) > 0}}">还差{{20 - totalPrice }}元起送</view>
+                        <view class="pay enough" wh:if="{{(20 - totalPrice) <= 0}}" catchtap="account">
+                            去结算
+                        </view>
+                        <!-- <navigator url="/pages/order_detail/order_detail?avatar={{seller.avatar}}&name={{seller.name}}&cartArray={{cartArray}}" 
+                        hover-class="navigator-hover">
+                            
+                        </navigator> -->
                     </view>
-                    <!-- <navigator url="/pages/order_detail/order_detail?avatar={{seller.avatar}}&name={{seller.name}}&cartArray={{cartArray}}" 
-                    hover-class="navigator-hover">
-                        
-                    </navigator> -->
                 </view>
-            </view>
 
-            <!-- 购物车 -->
-            <view class="shopcart-list" style="display:{{cartShow}}">
-                <view class="list-header">
-                    <view class="title">购物车</view>
-                    <view class="empty">清空</view>
-                </view>
-                <view class="list-content">
-                    <view class="shopcart-food" wx:for="{{cartArray}}" wx:for-item="idx" wx:if="{{idx.name}}">
-                        <view class="name" wx:if="{{idx.name}}">{{idx.name}}</view>
-                        <view class="price">
-                            <span>{{idx.price * idx.num}}</span>
-                        </view>
-                        <!-- cartControl -->
-                        <view class="cartControl-wrapper">
-                            <view class="cartControl">
-                                <view name="fade">
-                                    <!-- "-"图标 -->
-                                    <view class="cart-decrease" style="display:inline-block;">
-                                        <view class="inner iconfont icon-jian" style="font-size:24px;color:#00A0DC;" catchtap="decreaseCart"></view>
+                <!-- 购物车 -->
+                <view class="shopcart-list" style="display:{{cartShow}}">
+                    <view class="list-header">
+                        <view class="title">购物车</view>
+                        <view class="empty">清空</view>
+                    </view>
+                    <view class="list-content">
+                        <view class="shopcart-food" wx:for="{{cartArray}}" wx:for-item="idx" wx:if="{{idx.name}}">
+                            <view class="name" wx:if="{{idx.name}}">{{idx.name}}</view>
+                            <view class="price">
+                                <span>{{idx.price * idx.num}}</span>
+                            </view>
+                            <!-- cartControl -->
+                            <view class="cartControl-wrapper">
+                                <view class="cartControl">
+                                    <view name="fade">
+                                        <!-- "-"图标 -->
+                                        <view class="cart-decrease" style="display:inline-block;">
+                                            <view class="inner iconfont icon-jian" style="font-size:24px;color:#00A0DC;" catchtap="decreaseCart"></view>
+                                        </view>
+                                        <view class="cart-count" style="display:inline-block;width:32px;text-align:center;font-size:14px;">{{idx.num}}</view>
+                                        <!-- "+"图标 -->
+                                        <view class="iconfont icon-jia cart-add" style="font-size:24px;color:#00A0DC; padding:0;" catchtap="addCart"></view>
                                     </view>
-                                    <view class="cart-count" style="display:inline-block;width:32px;text-align:center;font-size:14px;">{{idx.num}}</view>
-                                    <!-- "+"图标 -->
-                                    <view class="iconfont icon-jia cart-add" style="font-size:24px;color:#00A0DC; padding:0;" catchtap="addCart"></view>
                                 </view>
                             </view>
                         </view>
                     </view>
                 </view>
-            </view>
 
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 商品区 -->
+
+
+
+
+
+
+<!-- 第二选项卡内容： 评论 -->
+<view wx:if="{{status==1}}">
+    <view class="rating">
+        <view class="ratings-content">
+            <view class="overview">
+                <view class="overview-left">
+                    <view class="rating-wrapper-score">4.2</view>
+                    <view class="rating-wrapper-title">综合评分</view>
+                    <view class="rating-wrapper-rank">高于周边商家69.2%</view>
+                </view>
+                <view class="overview-right">
+                    <view class="score-wrapper">
+                        <view class="score-wrapper-title">服务态度</view>
+                        <view class="score-wrapper-star">
+                            <image class='star-img' src='../../resource/starImg/04.png' style="width: 60px;height:16px"></image>
+                        </view>
+                        <view class="score-wrapper-score">4.1</view>
+                    </view>
+                    <view class="score-wrapper">
+                        <view class="score-wrapper-title">商品评分</view>
+                        <view class="score-wrapper-star">
+                            <image class='star-img' src='../../resource/starImg/04.png' style="width: 60px;height:16px"></image>
+                        </view>
+                        <view class="score-wrapper-score">4.3</view>
+                    </view>
+                    <view class="delivery-wrapper">
+                        <view class="delivery-wrapper-title">送达时间</view>
+                        <view class="delivery-wrapper-deliveryTime">38分钟</view>
+                    </view>
+                </view>
+            </view>
+            <view class="split" style="pointer-events: auto;"></view>
+            <view class="ratingselect">
+                <view class="rating-type">
+                    <view class="block-positive">全部24</view>
+                    <view class="block-positive">满意18</view>
+                    <view class="block-negative">不满意6</view>
+                </view>
+                <view class="ratingselect-switch">
+                    <view class="icon-check_circle"></view>
+                    <view class="ratingselect-switch-text">只看有内容的评价</view>
+                </view>
+            </view>
+            <view class="rating-wrapper">
+                <view>
+                    <view class="li-rating-item">
+                        <view class="rating-item-avatar">
+                            <image style="width:28px; height:28px;border-radius:50%" src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"></image>
+                        </view>
+                        <view class="rating-item-content">
+                            <view class="rating-item-content-header">
+                                <view class="rating-item-content-name">9******0</view>
+                                <view class="rating-item-content-time">2018/3/21 14:23</view>
+                            </view>
+                            <view class="rating-item-content-star-wrapper">
+                                <view class="rating-item-content-star-wrapper-star">星级区</view>
+                                <view class="rating-item-content-star-wrapper-delivery">70</view>
+                            </view>
+                            <view class="rating-item-content-text">送货速度蜗牛一样</view>
+                        </view>
+                    </view>
+                    <view class="li-rating-item">
+                        <view class="rating-item-avatar">
+                            <image style="width:28px; height:28px;border-radius:50%" src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"></image>
+                        </view>
+                        <view class="rating-item-content">
+                            <view class="rating-item-content-header">
+                                <view class="rating-item-content-name">9******0</view>
+                                <view class="rating-item-content-time">2018/3/21 14:23</view>
+                            </view>
+                            <view class="rating-item-content-star-wrapper">
+                                <view class="rating-item-content-star-wrapper-star">星级区</view>
+                                <view class="rating-item-content-star-wrapper-delivery">70</view>
+                            </view>
+                            <view class="rating-item-content-text">送货速度蜗牛一样</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
         </view>
     </view>
 </view>
 
 
-
-
-<view wx:if="{{status==1}}">
-    我是评论
-</view>
-
+<!-- 第三选项卡内容：商家 -->
 <view wx:if="{{status==2}}">
-    我是商家
+    <view class="seller">
+        <view class="seller-content">
+            <view class="seller-overview">
+                <view class="seller-overview-header">
+                    <view class="seller-overview-title">粥品香坊（回龙观）</view>
+                </view>
+                <view class="seller-overview-desc">
+                    <view class="seller-overview-decs-star">
+                        <view class="seller-overview-decs-star-img">
+                                <image class='star-img' src='../../resource/starImg/04.png' style="width: 60px;height:16px"></image>
+                        </view>
+                        <view class="seller-overview-decs-star-text">月售90单</view>
+                    </view>
+                </view>
+                <view class="seller-overview-remark">
+                    <view class="seller-overview-remark-block">起送价</view>
+                    <view class="seller-overview-remark-block">商家配送</view>
+                    <view class="seller-overview-remark-block">平均配送时间</view>
+                </view>
+            </view>
+            <!-- 空白分隔 -->
+            <view class="split" style="pointer-events: auto;"></view>
+
+            <!-- 公告区 -->
+            <view class="bulletin">
+                <view class="bulletin-title">公告与活动</view>
+                <view class="bulletin-content">
+                    粥品香坊其烹饪粥料的秘方源于中国千年古法，在融和现代制作工艺，由世界烹饪大师屈浩先生领衔研发。坚守纯天然、0添加的良心品质深得消费者青睐，发展至今成为粥类的引领品牌。是2008年奥运会和2013年园博会指定餐饮服务商。
+                </view>
+                <view class="bulletin-supports">
+                    <view class="bulletin-supports-item">
+                        
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>

@@ -133,8 +133,13 @@ image{
 .star{
   font-size: 12px;
 }
+
+.star-img{
+  display: inline-block;
+}
+
 .score{
-  margin:0 7px 0 6px;
+  margin:0 7px 0 12px;
   font-size: 12px;
   color:#ff6600;
 }

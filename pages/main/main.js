@@ -18,7 +18,8 @@ Page({
 		indicatorDots: false,
 		autoplay: false,
 		interval: 5000,
-		duration: 1000     
+		duration: 1000,
+		starts: [],   
 	},
 
 	/**
@@ -133,12 +134,10 @@ Page({
 	},
 
     locatedSeller: function (e) {
-		debugger
 		let sellerId = e.currentTarget.dataset.sellerid
 		wx.navigateTo({
 			url: '../goods/goods?id=' + sellerId
 		})
-    }
-
+    },
 
 })

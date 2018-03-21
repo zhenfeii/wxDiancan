@@ -42,7 +42,12 @@
               <span class="name">{{item.name}}</span>
             </div>
             <div class="description">
-              <span class="star">星级组件</span>
+              <span class="star">
+                <!-- 示范了wx:if wx:elif wx:else的用法 -->
+                <image class='star-img' src='../../resource/starImg/05.png' wx:if="{{item.foodScore == 5}}" style="width: 60px;height:16px"></image>
+                <image class='star-img' src='../../resource/starImg/04.png' wx:elif="{{4 <= item.foodScore < 5}}" style="width: 60px;height:16px"></image>
+                <image class='star-img' src='../../resource/starImg/03.png' wx:else="{{3 <= item.foodScore < 4}}" style="width: 60px;height:16px"></image>
+              </span>
               <span class="score">{{item.foodScore}}</span>
               <span class="sell">月售{{item.sellCount}}单</span>
             </div>
@@ -54,6 +59,5 @@
         </li>
       </navigator>
     </ul>
-
   </div>
 </view>

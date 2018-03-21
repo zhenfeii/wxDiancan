@@ -7,20 +7,7 @@
     "pages/more/more",
     "pages/user_userMain/user_userMain",
     "pages/logs/logs",
-    "pages/amap/index/index",
 		"pages/user_changedAddress/user_changedAddress",
-    "pages/amap/regeo/regeo",
-    "pages/amap/weather/weather",
-    "pages/amap/poi/poi",
-    "pages/amap/staticmap/staticmap",
-    "pages/amap/navigation_car/navigation",
-    "pages/amap/navigation_bus/navigation",
-    "pages/amap/navigation_walk/navigation",
-    "pages/amap/navigation_ride/navigation",
-    "pages/amap/navigation_car_detail/navigation",
-    "pages/amap/navigation_walk_detail/navigation",
-    "pages/amap/navigation_ride_detail/navigation",
-    "pages/amap/inputtips/input",
     "pages/index/index"
   ],
   "tabBar": {
@@ -40,7 +27,7 @@
         "text": "订单"
       },
       {
-        "pagePath": "pages/amap/index/index",
+        "pagePath": "pages/more/more",
         "iconPath": "resource/img/icon-xuexi.png",
         "selectedIconPath": "resource/img/icon-kaoshi-act.png",
         "text": "更多"

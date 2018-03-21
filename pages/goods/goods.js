@@ -12,13 +12,6 @@ Page({
 		totalCount: 0,   //已选择商品的个数
 		totalPrice: 0,	//总价钱
 		cartShow: "none", //购物车显示与否
-
-		//订单信息
-		orderDetail: [{
-			name: "凉茶铺",
-			price: "8",
-			number: "3"
-		}]
 	},
 
 	/**
